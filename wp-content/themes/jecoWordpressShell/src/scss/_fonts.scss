@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+:root {
+	--font-inter: "Inter", sans-serif;
+	--font-SourceSerif4: "Source Serif 4", serif;
+	--font-bold-title: 900;
+	--font-bold: 500;
+}
+
+.font-sourceSerif4 {
+	font-family: "Source Serif 4", serif;
+}
+
+.font-inter {
+	font-family: "Inter", sans-serif;
+}
+
+$base-font-size: 1rem;
+$scale: 1.2;
+
+@mixin heading-sizes($level) {
+	@if $level == -1 {
+		font-size: ($base-font-size / $scale);
+	}
+
+	@else if $level == 0 {
+		font-size: ($base-font-size);
+	}
+
+	@else {
+		font-size: ($base-font-size * ($scale * $level));
+	}
+}
+
+// Apply the font sizes for each heading
+
+html{
+font-size: 20px
+}
+
+h6 {
+	@include heading-sizes(-1);
+  font-size: 0.8333333333rem;
+  line-height: 1.4; /* 1.4 times the font size for compact text */
+  margin-bottom: 0.5rem; /* Tight spacing for smaller headings */
+}
+
+h5, p {
+	@include heading-sizes(0);
+  font-size: 1rem;
+  line-height: 1.5; /* Standard readable line height */
+  margin-bottom: 0.75rem; /* Moderate spacing for regular text */
+}
+
+h4 {
+	@include heading-sizes(1);
+  font-size: 1.2rem;
+  line-height: 1.4; /* Slightly compact to maintain proximity */
+  margin-bottom: 1rem; /* A bit more space to set off from text */
+}
+
+h3 {
+	@include heading-sizes(2);
+  font-size: 2.4rem;
+  line-height: 1.3; /* Slightly tighter to fit the larger size */
+  margin-bottom: 1.2rem; /* Larger margin to balance the size */
+}
+
+h2 {
+	@include heading-sizes(3);
+  font-size: 3.6rem;
+  line-height: 1.2; /* Tight line-height for large text */
+  margin-bottom: 1.5rem; /* More margin to emphasize hierarchy */
+}
+
+h1 {
+	@include heading-sizes(4);
+  font-size: 4.8rem;
+  line-height: 1.2; /* Tightest line height for very large headings */
+  margin-bottom: 2rem; /* Large margin to separate the most important heading */
+}

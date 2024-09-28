@@ -1,0 +1,13 @@
+// Colors palette
+:root {
+	--color-black: #000000;
+	--color-white: #ffffff;
+	--color-grey: #e5e7eb;
+
+	--background-color: var(--color-black);
+	--title-color: var(--color-white);
+	--text-color: var(--color-grey);
+	--border-color: var(--color-grey);
+
+	--link-color: var(--color-white);
+}
