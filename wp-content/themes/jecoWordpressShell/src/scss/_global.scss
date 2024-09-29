@@ -11,6 +11,10 @@ a {
 	// font-weight: var(--font-bold-default);
 }
 
+.mb-0 {
+	margin-bottom: 0;
+}
+
 .wrapper {
 	max-width: 100%;
 	margin: 0 auto;
@@ -33,7 +37,7 @@ a {
 
 	// Apply styles for medium desktops and up
 	@include for-bp('desktop-md') {
-		max-width: 1400px;
+		//max-width: 1400px;
 	}
 
 	// Apply styles for large desktops and up
