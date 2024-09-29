@@ -20,7 +20,7 @@ $scale: 1.2;
 
 @mixin heading-sizes($level) {
 	@if $level == -1 {
-		font-size: ($base-font-size / $scale);
+		font-size: calc($base-font-size / $scale);
 	}
 
 	@else if $level == 0 {

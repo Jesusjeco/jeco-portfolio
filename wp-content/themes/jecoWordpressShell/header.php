@@ -23,6 +23,8 @@
         echo display_main_menu($logo_url); ?>
     </header>
 
+    <?php
+    /*
     <!-- Breadcrumbs -->
     <nav class="breadcrumb">
         <!-- Fallback content if breadcrumbs are not available -->
@@ -44,3 +46,5 @@
         </div>
     </nav>
     <!-- End Breadcrumbs -->
+    */
+    ?>
